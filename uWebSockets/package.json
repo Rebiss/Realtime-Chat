@@ -1,0 +1,8 @@
+{
+  "name": "uWebSockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rebiss",
+  "license": "MIT",
+  "private": true
+}
