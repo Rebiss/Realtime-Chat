@@ -1,5 +1,3 @@
-#Private 
-uWebSockets/core*
 ### Windows template
 Thumbs.db
 Thumbs.db:encryptable
@@ -121,6 +119,3 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 .idea
 /dist
-
-# Local Netlify folder
-.netlify
