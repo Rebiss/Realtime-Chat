@@ -2,6 +2,7 @@
 [![Node](https://img.shields.io/badge/node--lts-v14.15.0-brightgreen)]()
 [![React](https://img.shields.io/badge/react-%5E17.0.1-informational)]()
 [![Yarn](https://img.shields.io/badge/yarn-1.22.5-violet)]()
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b9682f1-9c13-4d7c-a677-9bf31646c960/deploy-status)](https://app.netlify.com/sites/jovial-aryabhata-e0b078/deploys)
 
 <hr />
 
