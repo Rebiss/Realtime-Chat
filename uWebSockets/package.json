@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "rebiss",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "debug": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "got": "^11.8.0",
+    "mongoose": "^5.10.13",
+    "nats": "^1.4.12",
+    "nodemon": "^2.0.6",
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v18.1.0"
+  }
 }
