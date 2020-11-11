@@ -6,7 +6,7 @@ import {Text} from '../view/Text/Text.jsx';
 import {Messages} from '../view/Messages/Messages.jsx';
 import {Bar} from '../view/Bar/Bar.jsx'
 import {Input} from '../view/Input/Input.jsx';
-import {SERVER_URL} from '../config/cfg.js'
+import {SERVER_URL, HEROKU_URL } from '../config/cfg.js'
 import './style/Chat.css';
 
 let socket;
@@ -18,12 +18,10 @@ export const Chat = ({ location }) => {
     [message, setMessage] = useState(''),
     [messages, setMessages] = useState([]);
 
-    console.log('>>>>>>>', SERVER_URL)
-
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(SERVER_URL);
+    socket = io(HEROKU_URL);
 
     setRoom(room);
     setName(name);
@@ -31,7 +29,7 @@ export const Chat = ({ location }) => {
     socket.emit('join', { name, room }, (error) => {
       if(error) alert(error);
     });
-  }, [SERVER_URL, location.search]);
+  }, [HEROKU_URL, location.search]);
   
   useEffect(() => {
     socket.on('message', message => {
