@@ -27,4 +27,4 @@ export const Message = ({ message: { text, user }, name }) => {
           </div>
         )
   );
-};;
+};

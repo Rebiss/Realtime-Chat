@@ -8,12 +8,16 @@ export const Input = ({ setMessage, sendMessage, message }) => {
 
   return (
       <form className="form">
-          <input className="input" type="text" placeholder="Type a message..." 
+          <input className="input" type="text" placeholder="message ..." 
             value={message}
             onChange={handleChangeInput}
             onKeyPress={handleKeyPress}
           />
-          <button className="sendButton" onClick={handleSendBtn}>Send</button>
+          <button className="sendButton" onClick={handleSendBtn}>
+            <span className='send-icon'>
+              <i class="fas fa-paper-plane"></i>
+            </span>
+          </button>
       </form>
   )
 }
