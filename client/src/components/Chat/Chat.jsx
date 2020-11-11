@@ -6,11 +6,9 @@ import {Text} from '../view/Text/Text.jsx';
 import {Messages} from '../view/Messages/Messages.jsx';
 import {Bar} from '../view/Bar/Bar.jsx'
 import {Input} from '../view/Input/Input.jsx';
-
+import {SERVER_URL} from '../config/cfg.js'
 import './style/Chat.css';
 
-// const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
-const ENDPOINT = 'localhost:5000/';
 let socket;
 
 export const Chat = ({ location }) => {
@@ -20,18 +18,20 @@ export const Chat = ({ location }) => {
     [message, setMessage] = useState(''),
     [messages, setMessages] = useState([]);
 
+    console.log('>>>>>>>', SERVER_URL)
+
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io(SERVER_URL);
 
     setRoom(room);
     setName(name);
-
+    
     socket.emit('join', { name, room }, (error) => {
       if(error) alert(error);
     });
-  }, [ENDPOINT, location.search]);
+  }, [SERVER_URL, location.search]);
   
   useEffect(() => {
     socket.on('message', message => {
